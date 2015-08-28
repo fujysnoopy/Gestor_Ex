@@ -36,7 +36,6 @@ public class Venta {
             lp.add(new ProductoVenta(unidades, producto));
             producto.setStock(producto.getStock() - unidades); //Establezco nuevo stock
             importeVenta = importeVenta + (unidades * producto.getPci());
-            //System.out.println(this.getId());
             return true;
         }
         return false;
@@ -49,6 +48,7 @@ public class Venta {
     public String getId() {
         return id;
     }
+    public float getImporteVenta(){ return importeVenta; }
 
     public String toString(){
         return String.format("ID Venta: %12s Cod.Cliente: %d Tam.Lista: %d", this.id, cliente.getCod(), lp.size());
