@@ -8,7 +8,7 @@ import java.util.Date;
 public class Factura {
     private Cliente cliente;
     private String fechaEmision;
-    private int importeTotal;
+    private float importeTotal;
     private int numFactura;
     private ArrayList<Venta> ventas; // lo devuelve el gestorventas
     
@@ -38,20 +38,37 @@ public class Factura {
         cliente = c;
         ventas = lvf;
         fechaEmision = DATE_FORMAT.format(new Date());
-        numFactura = 123; 
+        numFactura = 123;
+        importeTotal = calcularImporte(lvf);
     }
 
 
     public int getFacturaID() {
         return numFactura;
     }
-        
+
+    /**
+     * ID: AAAAMMDDHHMM
+      * @return
+     */
     public String toString(){
         return String.format("ID Factura: %10d Fecha Emisión: %s", numFactura, fechaEmision);
     }
+
+    private float calcularImporte(ArrayList<Venta> listaVentas){
+        float importe = 0;
+        for(Venta vent : listaVentas){
+            importe = importe + vent.getImporteVenta();
+        }
+
+        return importe;
+    }
+
+
 }
     /*
-       
+
+
        
     public String toString(){
 	// toString puede tener un for para que imprima todo

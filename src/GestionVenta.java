@@ -9,7 +9,7 @@ public class GestionVenta {
 
 
     public GestionVenta() {
-        gv = new HashMap<>();
+        gv = new HashMap<Cliente, ArrayList<Venta>>();
     }
 
 
@@ -20,24 +20,26 @@ public class GestionVenta {
 
             cVentas = gv.get(c);
             cVentas.add(v);
-            //Falta incluir en HashMap el arraylist con el nuevo elemento
+            gv.put(c,cVentas);
+
 
         } else {
             cVentas = new ArrayList<Venta>();
             cVentas.add(v);
             gv.put(c, cVentas);
-            System.out.println(gv.size());
+            //System.out.println(gv.size());
         }
     }
 
-    public boolean buscarVentas(Cliente c) {
+    private boolean buscarVentas(Cliente c) {
         if (gv.containsKey(c))
             return true;
         return false;
     }
 
     public ArrayList<Venta> ventasCliente(Cliente c) {
-        if (gv.containsKey(c)) {
+        if (buscarVentas(c)) {
+
             return gv.get(c);
         }
 
