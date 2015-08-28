@@ -8,7 +8,7 @@ public class GestionProductos extends Gestor<ProductoStock> {
 	
 	public ProductoStock busqueda(String nombre){
 		for (ProductoStock p: gest){
-			if(p.getDesc().contains(nombre))
+			if(p.getDesc().equals(nombre))
 				return p; 
 			}
 		return null;

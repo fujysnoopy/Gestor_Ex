@@ -81,16 +81,16 @@ public class GestionVenta {
             boolean sw = false;
             ArrayList<Venta> informeVentas = null;
             if(gv.containsKey(cliente)){
-                for (ArrayList<Venta> listaVentas : gv.get(cliente)){
-                    for(Venta ventas:listaVentas){
-                        int fechVenta;
-                        fechVenta = Integer.parseInt(ventas.getId().substring(0, 8));
-                        if (fechVenta >= desde && fechVenta <= hasta) {
+      //          for (ArrayList<Venta> listaVentas : gv.get(cliente)){
+ //                   for(Venta ventas:listaVentas){
+                        //int fechVenta;
+                        //fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
+                       // if (fechVenta >= desde && fechVenta <= hasta) {
 
 
-                    }
-                }
-            }
+                        //}
+   //                 }
+           // }
 
 
         }
