@@ -9,7 +9,7 @@ public class GestionVenta {
 
 
     public GestionVenta() {
-        gv = new HashMap<Cliente, ArrayList<Venta>>();
+        gv = new HashMap<>();
     }
 
 
@@ -81,10 +81,10 @@ public class GestionVenta {
             boolean sw = false;
             ArrayList<Venta> informeVentas = null;
             if(gv.containsKey(cliente)){
-                for (ArrayList<Venta> listaVentas : get(cliente){
-                    for(Ventas ventas:listaVentas){
+                for (ArrayList<Venta> listaVentas : gv.get(cliente)){
+                    for(Venta ventas:listaVentas){
                         int fechVenta;
-                        fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
+                        fechVenta = Integer.parseInt(ventas.getId().substring(0, 8));
                         if (fechVenta >= desde && fechVenta <= hasta) {
 
 
@@ -98,11 +98,13 @@ public class GestionVenta {
     }
         return null;
     }
+/*
+
 
     private ArrayList<Venta> buscarVentasTiempo(ArrayList<Venta> listaVentas, int desde, int hasta){
 
             for (ArrayList<Venta> listaVentas : get(cliente)){
-                for(Ventas ventas:listaVentas){
+                for(Venta ventas:listaVentas){
                     int fechVenta;
                     fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
                     if (fechVenta >= desde && fechVenta <= hasta) {
@@ -113,7 +115,7 @@ public class GestionVenta {
             }
     }
 
-
+*/
     public void importar(String fichero) {
 
     }

@@ -180,8 +180,8 @@ public class prueba_producto {
     public void listados(){
         System.out.println("- Entrando en listados de ventas");
         ArrayList<Venta> listadoVenta =    gv.listadoVentasTiempo(20150101, 20151212);
-        System.out.println("Tam. litadoVentasTiempo: ", listadoVenta.size());
+       // System.out.println("Tam. litadoVentasTiempo: ", listadoVenta.size());
         ArrayList<Venta> listadoVentaCliente = gv.listadoVentasTiempoCliente(c2,20150101, 20151212);
-        System.out.println("Tam. litadoVentasTiempoCliente: ", listadoVentaCliente.size());
+       // System.out.println("Tam. litadoVentasTiempoCliente: ", listadoVentaCliente.size());
     }
 }
