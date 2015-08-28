@@ -12,6 +12,7 @@ public class Venta {
     private String id;
     private ArrayList<ProductoVenta> lp;
     public static final SimpleDateFormat DATE_TIME_FORMAT = new SimpleDateFormat("yyyyMMddHHmm");
+    private float importeVenta;
 
     /**
      * @param c
@@ -20,6 +21,7 @@ public class Venta {
         id = DATE_TIME_FORMAT.format(new Date()); //Aquí hay q crear id venta
         cliente = c;
         lp = new ArrayList<ProductoVenta>();
+        importeVenta = 0;
     }
 
     /**
@@ -33,7 +35,7 @@ public class Venta {
         if (unidades <= producto.getStock()) { // Compruebo realmente hay stock
             lp.add(new ProductoVenta(unidades, producto));
             producto.setStock(producto.getStock() - unidades); //Establezco nuevo stock
-
+            importeVenta = importeVenta + (unidades * producto.getPci());
             //System.out.println(this.getId());
             return true;
         }
