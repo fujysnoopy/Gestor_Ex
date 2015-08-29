@@ -17,7 +17,7 @@ public class GestorFacturas {
      * @param fecha
      * @return
      */
-    public boolean generarFactura(Cliente c, ArrayList<Venta> ventas, String anoFiscal){
+    public Factura generarFactura(Cliente c, ArrayList<Venta> ventas, String anoFiscal){
         ArrayList<Venta> ventasFact = null;
         boolean sw = false;
         
@@ -36,10 +36,11 @@ public class GestorFacturas {
         }
         
         if (sw == true) {
-            facturas.add(new Factura(c, ventasFact));
-            return true;
+            Factura fact=new Factura(c, ventasFact);
+            facturas.add(fact);
+            return fact;
         }
-    return false;
+    return null;
     }
     
     public Factura buscarFactura(int facturaID){

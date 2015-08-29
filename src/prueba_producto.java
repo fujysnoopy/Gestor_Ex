@@ -107,13 +107,13 @@ public class prueba_producto {
 
         System.out.println("- Añadir productos a ventas de clientes");
         //cliente c
-        v.altaProductoVenta(1, gp.busqueda(1));
-        v.altaProductoVenta(2, gp.busqueda(2));
+        v.altaProductoVenta(1, gp.busqueda(p1.getCod()));
+        v.altaProductoVenta(2, gp.busqueda(p2.getCod()));
         //Cliente c2
-        v2.altaProductoVenta(1, gp.busqueda(3));
-        v3.altaProductoVenta(1, gp.busqueda(3));
-        v3.altaProductoVenta(1, gp.busqueda(4));
-        v4.altaProductoVenta(1, gp.busqueda(4));
+        v2.altaProductoVenta(1, gp.busqueda(p3.getCod()));
+        v3.altaProductoVenta(1, gp.busqueda(p3.getCod()));
+        v3.altaProductoVenta(1, gp.busqueda(p4.getCod()));
+        v4.altaProductoVenta(1, gp.busqueda(p4.getCod()));
 
         System.out.println("- Alta Ventas en GV");
         gv.anadirVenta(c, v);
@@ -167,8 +167,10 @@ public class prueba_producto {
         ArrayList<Venta> hh= gv.ventasCliente(clienteBuscado);
         f = new Factura(clienteBuscado, hh);
         gf = new GestorFacturas();
-        if(gf.generarFactura(clienteBuscado, hh, "2015")){
+        Factura fact = gf.generarFactura(clienteBuscado, hh, "2015");
+        if(fact!=null){
             System.out.println("Creada factura cliente");
+
             System.out.println(c);
             System.out.println(f);
             

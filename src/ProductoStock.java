@@ -4,7 +4,6 @@
 public class ProductoStock extends Producto {
 
     private int stock;
-    static int serie = 0;
     private int cod;
     private boolean baja;
 
@@ -15,9 +14,8 @@ public class ProductoStock extends Producto {
     public ProductoStock(String desc, int psi, int iva, int stock) {
         super(desc, psi, iva);
         this.stock = stock;
-        cod = ++serie;
+        cod = getUID();
         baja = false;
-
         //System.out.println(cod);
     }
 
@@ -26,7 +24,7 @@ public class ProductoStock extends Producto {
         this.stock = stock;
     }
 
-    public void setBaja(){ baja=true; }
+    public boolean setBaja(){ return baja=true; }
 
     public int getStock() {
         return stock;
@@ -36,6 +34,9 @@ public class ProductoStock extends Producto {
         return cod;
     }
 
+    public static int getUID(){
+        return  (int)(Math.random()*100000);
+    }
 
     public String toString() {
         //	       ("COD DE PRODUCTO         DESCRIPCION          PRECIO SIN IVA            IVA            PRECIO CON IVA             STOCK           ")

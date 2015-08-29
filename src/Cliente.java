@@ -46,8 +46,8 @@ public class Cliente {
         return id;
     }
 
-    public void setBaja(){
-        baja=true;
+    public boolean setBaja(){
+        return baja=true;
 
     }
 

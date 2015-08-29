@@ -75,8 +75,8 @@ public class GestionVenta {
                     }
                 }
             }
-            if (sw == true)
-                return informeVentas;
+            if (sw == true) return informeVentas;
+
         }
         return null;
     }
@@ -86,21 +86,20 @@ public class GestionVenta {
             boolean sw = false;
             ArrayList<Venta> informeVentas = null;
             if(gv.containsKey(cliente)){
-                for (ArrayList<Venta> listaVentas : gv.get(cliente)){
- //                   for(Venta ventas:listaVentas){
-                        //int fechVenta;
-                        //fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
-                       // if (fechVenta >= desde && fechVenta <= hasta) {
-
-
-                        //}
+                    for(Venta venta:gv.get(cliente)){
+                        int fechVenta;
+                        fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
+                        if (fechVenta >= desde && fechVenta <= hasta) {
+                            if(sw==false){
+                                informeVentas = new ArrayList<Venta>();
+                                sw=true;
+                            }
+                            informeVentas.add(venta);
+                        }
                     }
-           // }
-
-
+                if (sw == true) return informeVentas;
+            }
         }
-
-    }
         return null;
     }
 /*

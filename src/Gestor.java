@@ -4,32 +4,35 @@ import java.util.HashSet;
 
 
 
-public class Gestor<E> {
+public class Gestor<E> implements java.io.Serializable{
 	
 	protected HashSet<E> gest;
+    private static final long serialVersionUID = 1L;
 	
 	public Gestor(){
 		gest = new HashSet<E>();	
 	}
 	
-	public void alta(E element){
-		gest.add(element);
+	public boolean alta(E element){
+		return gest.add(element);
 	}
 	
 	public E busqueda(int cod){
-		
-		for(E element:gest){	
-			if (element instanceof ProductoStock){
-				if(cod==((ProductoStock) element).getCod()){
-				//if(cod==(new ProductoStock()).getCod()){
-					//System.out.println("cod producto encontrado");
-					return element;
-				}
-			}else if(cod==((Cliente) element).getCod()){
-				//System.out.println("cod cliente encontrado");
-					return element;	
-		}
-	}
+		if(gest.size()!=0) {
+            for (E element : gest) {
+                if (element instanceof ProductoStock) {
+                    if (cod == ((ProductoStock) element).getCod()) {
+                        //if(cod==(new ProductoStock()).getCod()){
+                        //System.out.println("cod producto encontrado");
+                        return element;
+                    }
+                } else if (cod == ((Cliente) element).getCod()) {
+                    //System.out.println("cod cliente encontrado");
+                    return element;
+                }
+            }
+        }
+
 		return null;
 	}
 	
@@ -42,18 +45,15 @@ public class Gestor<E> {
 	 return false;		
 	}
 
-	public boolean baja(int cod){
-		E e = busqueda(cod);
-		if(e!=null){
-            if (e instanceof ProductoStock){
-                ((ProductoStock) e).setBaja();
-            }else{
-                ((Cliente) e).setBaja();
+	public boolean baja(int cod) {
+        E e = busqueda(cod);
+        if (e != null) {
+            if (e instanceof ProductoStock) {
+                return ((ProductoStock) e).setBaja();
+            } else {
+                return ((Cliente) e).setBaja();
             }
-
-
-
-		}
+        }
 
 	return false;
 	}
