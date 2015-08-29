@@ -9,7 +9,7 @@ public class GestionVenta {
 
 
     public GestionVenta() {
-        gv = new HashMap<Cliente, ArrayList<Venta>>();
+        gv = new HashMap<>();
     }
 
 

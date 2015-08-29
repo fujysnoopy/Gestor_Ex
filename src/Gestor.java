@@ -10,7 +10,7 @@ public class Gestor<E> implements java.io.Serializable{
     private static final long serialVersionUID = 1L;
 	
 	public Gestor(){
-		gest = new HashSet<E>();	
+		gest = new HashSet<>();
 	}
 	
 	public boolean alta(E element){

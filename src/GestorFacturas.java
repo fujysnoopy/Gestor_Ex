@@ -7,7 +7,7 @@ public class GestorFacturas {
 	private HashSet<Factura> facturas;
 	
 	public GestorFacturas(){
-		facturas = new HashSet<Factura>();
+		facturas = new HashSet<>();
 	}
 
     /*********************************************************************************************

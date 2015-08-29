@@ -4,17 +4,12 @@
 public class ProductoStock extends Producto {
 
     private int stock;
-
     private boolean baja;
 
-    public ProductoStock() {
-        this.stock = 0;
-    }
 
     public ProductoStock(String desc, int psi, int iva, int stock) {
         super(desc, psi, iva);
         this.stock = stock;
-        cod = super.getUID();
         baja = false;
     }
 
@@ -29,16 +24,14 @@ public class ProductoStock extends Producto {
         return stock;
     }
 
-    public int getCod() {
-        return cod;
+    public boolean getBaja(){
+        return baja;
     }
-
-
 
     public String toString() {
         //	       ("COD DE PRODUCTO         DESCRIPCION          PRECIO SIN IVA            IVA            PRECIO CON IVA             STOCK           ")
         //	return String.format(" " + this.cod + "     " + this.desc + "     " + this.psi + "     " + this.iva + "     " + this.pci + "     " + this.stock);
-        return String.format("%10d %15s %10d %8d %10.2f %10d", cod, this.getDesc(), this.getPsi(), this.getIva(),
+        return String.format("%10d %15s %10d %8d %10.2f %10d", this.getCod(), this.getDesc(), this.getPsi(), this.getIva(),
                              this.getPci(), this.stock);
     }
 
