@@ -13,9 +13,6 @@ public class Producto {
     }
 
     public Producto(String desc, int psi, int iva) {
-        //cod=setID();
-        //cod=cod++;
-        //cod++;
         this.desc = desc;
         this.psi = psi;
         this.iva = iva;
@@ -24,7 +21,7 @@ public class Producto {
 
     }
 
-    protected static int getUID(){
+    private static int getUID(){
         return  (int)(Math.random()*100000);
     }
 

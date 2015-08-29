@@ -46,6 +46,10 @@ public class Cliente {
         return id;
     }
 
+    private static int getUID(){
+        return (int) Math.random()*100000;
+    }
+
     public boolean setBaja(){
         return baja=true;
 
