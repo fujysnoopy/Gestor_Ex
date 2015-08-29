@@ -2,7 +2,7 @@
 
 public class Producto {
 
-    //protected static int cod = 1;
+    private int cod;
     private int psi, iva;
     private float pci;
     private String desc;
@@ -16,17 +16,18 @@ public class Producto {
         this.desc = desc;
         this.psi = psi;
         this.iva = iva;
+        cod = getUID();
         pci = calculaPCI(psi, iva);
-        //pci=123;
 
     }
 
-    private static int getUID(){
-        return  (int)(Math.random()*100000);
-    }
 
     public String getDesc() {
         return desc;
+    }
+
+    public int getCod() {
+        return cod;
     }
 
     public int getPsi() {
@@ -41,8 +42,11 @@ public class Producto {
         return pci;
     }
 
+    private static int getUID() {
+        return (int) (Math.random() * 100000);
+    }
 
     private static float calculaPCI(int psi, int iva) {
-        return psi+((psi * iva) / 100);
+        return psi + ((psi * iva) / 100);
     }
 }

@@ -4,7 +4,7 @@
 public class ProductoStock extends Producto {
 
     private int stock;
-    private int cod;
+
     private boolean baja;
 
     public ProductoStock() {
@@ -14,9 +14,8 @@ public class ProductoStock extends Producto {
     public ProductoStock(String desc, int psi, int iva, int stock) {
         super(desc, psi, iva);
         this.stock = stock;
-        cod = Producto.getUID();
+        cod = super.getUID();
         baja = false;
-        //System.out.println(cod);
     }
 
 
