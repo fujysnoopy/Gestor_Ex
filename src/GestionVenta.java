@@ -86,7 +86,7 @@ public class GestionVenta {
             boolean sw = false;
             ArrayList<Venta> informeVentas = null;
             if(gv.containsKey(cliente)){
-      //          for (ArrayList<Venta> listaVentas : gv.get(cliente)){
+                for (ArrayList<Venta> listaVentas : gv.get(cliente)){
  //                   for(Venta ventas:listaVentas){
                         //int fechVenta;
                         //fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
@@ -94,7 +94,7 @@ public class GestionVenta {
 
 
                         //}
-   //                 }
+                    }
            // }
 
 
