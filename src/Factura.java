@@ -38,11 +38,13 @@ public class Factura {
         cliente = c;
         ventas = lvf;
         fechaEmision = DATE_FORMAT.format(new Date());
-        numFactura = 123;
+        numFactura = getUID();
         importeTotal = calcularImporte(lvf);
     }
 
-
+    private int getUID(){
+        return (int) Math.random()*100000;
+    }
     public int getFacturaID() {
         return numFactura;
     }

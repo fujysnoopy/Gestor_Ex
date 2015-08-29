@@ -14,7 +14,7 @@ public class ProductoStock extends Producto {
     public ProductoStock(String desc, int psi, int iva, int stock) {
         super(desc, psi, iva);
         this.stock = stock;
-        cod = getUID();
+        cod = Producto.getUID();
         baja = false;
         //System.out.println(cod);
     }
@@ -34,9 +34,7 @@ public class ProductoStock extends Producto {
         return cod;
     }
 
-    public static int getUID(){
-        return  (int)(Math.random()*100000);
-    }
+
 
     public String toString() {
         //	       ("COD DE PRODUCTO         DESCRIPCION          PRECIO SIN IVA            IVA            PRECIO CON IVA             STOCK           ")

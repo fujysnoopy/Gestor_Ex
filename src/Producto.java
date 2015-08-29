@@ -24,6 +24,9 @@ public class Producto {
 
     }
 
+    protected static int getUID(){
+        return  (int)(Math.random()*100000);
+    }
 
     public String getDesc() {
         return desc;
