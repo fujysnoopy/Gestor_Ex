@@ -41,7 +41,23 @@ public class Gestor<E> {
 		}
 	 return false;		
 	}
-	
+
+	public boolean baja(int cod){
+		E e = busqueda(cod);
+		if(e!=null){
+            if (e instanceof ProductoStock){
+                ((ProductoStock) e).setBaja();
+            }else{
+                ((Cliente) e).setBaja();
+            }
+
+
+
+		}
+
+	return false;
+	}
+
 	public void importar(String fichero){
 		
 	}

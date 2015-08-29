@@ -11,6 +11,7 @@ public class Cliente {
     private int id;
     private String nombre;
     private String razonSocial;
+    private boolean baja;
 
     /**
      *   Se debe implementar un constructor sin parámetros
@@ -37,12 +38,19 @@ public class Cliente {
         this.id = id;
         this.nombre = nombre;
         this.razonSocial = razonSocial;
+        this.baja= false;
 
     }
 
     public int getCod() {
         return id;
     }
+
+    public void setBaja(){
+        baja=true;
+
+    }
+
 
     @Override
     public boolean equals(Object obj){

@@ -31,7 +31,7 @@ public class GestionVenta {
         }
     }
 
-    private boolean buscarVentas(Cliente c) {
+    public boolean buscarVentas(Cliente c) {
         if (gv.containsKey(c))
             return true;
         return false;
@@ -65,10 +65,13 @@ public class GestionVenta {
                     int fechVenta;
                     fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
                     if (fechVenta >= desde && fechVenta <= hasta) {
-                        sw = true;
+                        if (sw==false){
+                            informeVentas = new ArrayList<>();
+                            sw = true;
+                        }
                         informeVentas.add(venta);
-                        //System.out.println(venta);
-                        //System.out.println("Pertenece!");
+                        System.out.println(venta);
+                        System.out.println("Pertenece!");
                     }
                 }
             }
