@@ -20,22 +20,13 @@ public class Cliente {
 
     }
 
-    /**
-     * @param NIF
-     * @param apellidos
-     * @param domicilio
-     * @param fechaAlta
-     * @param id
-     * @param nombre
-     * @param razonSocial
-     */
     public Cliente(String NIF, String apellidos, String domicilio, Date fechaAlta, int id, String nombre,
                    String razonSocial) {
         this.NIF = NIF;
         this.apellidos = apellidos;
         this.domicilio = domicilio;
         this.fechaAlta = fechaAlta;
-        this.id = id;
+        this.id = getUID();
         this.nombre = nombre;
         this.razonSocial = razonSocial;
         this.baja= false;
