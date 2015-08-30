@@ -13,12 +13,6 @@ public class Cliente {
     private String razonSocial;
     private boolean baja;
 
-    /**
-     *   Se debe implementar un constructor sin parámetros
-     */
-    public Cliente() {
-
-    }
 
     public Cliente(String NIF, String apellidos, String domicilio, Date fechaAlta, int id, String nombre,
                    String razonSocial) {

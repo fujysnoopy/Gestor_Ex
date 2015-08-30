@@ -21,13 +21,7 @@ public class Factura {
  * su cantidad vendida e importe total) así como suma del total de la venta (valor total de la factura)
  */
 
-/**
- * Constructor vacio
- * @param fechaEmision
- */
-    public Factura() {
 
-    }
 /**
  * Constructor Factura
  * @param c
