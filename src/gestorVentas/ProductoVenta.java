@@ -1,4 +1,6 @@
-//package tpv_ex_v05;
+package gestorVentas;//package tpv_ex_v05;
+
+import gestorProductos.ProductoStock;
 
 public class ProductoVenta {
 	

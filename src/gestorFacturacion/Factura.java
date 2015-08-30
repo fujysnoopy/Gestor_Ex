@@ -1,14 +1,16 @@
-//package tpv_ex_v05;
+package gestorFacturacion;
+
+import gestorClientes.Cliente;
+import gestorVentas.Venta;
 
 import java.text.SimpleDateFormat;
-
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Factura implements java.io.Serializable {
     private static final long serialVersionUID=1L;
     private Cliente cliente;
-    private String fechaEmision;
+    private int fechaEmision;
     private float importeTotal;
     private int numFactura;
     private ArrayList<Venta> ventas;
@@ -19,7 +21,7 @@ public class Factura implements java.io.Serializable {
     public Factura(Cliente c, ArrayList<Venta> lvf) {
         cliente = c;
         ventas = lvf;
-        fechaEmision = DATE_FORMAT.format(new Date());
+        fechaEmision = Integer.parseInt(DATE_FORMAT.format(new Date()));
         numFactura = getUID();
         importeTotal = calcularImporte(lvf);
     }

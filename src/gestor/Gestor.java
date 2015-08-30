@@ -1,5 +1,7 @@
-//package tpv_ex_v05;
+package gestor;//package tpv_ex_v05;
 
+import gestorClientes.Cliente;
+import gestorProductos.ProductoStock;
 import java.util.HashSet;
 
 
@@ -22,7 +24,7 @@ public class Gestor<E> implements java.io.Serializable{
             for (E element : gest) {
                 if (element instanceof ProductoStock) {
                     if (cod == ((ProductoStock) element).getCod() && !((ProductoStock) element).esBaja()) {
-                        //if(cod==(new ProductoStock()).getCod()){
+                        //if(cod==(new gestorProductos.ProductoStock()).getCod()){
                         //System.out.println("cod producto encontrado");
                         return element;
                     }

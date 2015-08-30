@@ -1,9 +1,16 @@
 //package tpv_ex_v05;
 
+import gestorClientes.Cliente;
+import gestorClientes.GestionCliente;
+import gestorFacturacion.Factura;
+import gestorFacturacion.GestorFacturas;
+import gestorProductos.GestionProductos;
+import gestorProductos.ProductoStock;
+import gestorVentas.GestionVenta;
+import gestorVentas.Venta;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class prueba_producto {
 
@@ -29,7 +36,7 @@ public class prueba_producto {
         gv = new GestionVenta();
         gf = new GestorFacturas();
 
-        System.out.println("---> TPV Inicializado");
+        System.out.println("---> tpv.TPV Inicializado");
 
 
         this.crearGestProd();
@@ -84,11 +91,11 @@ public class prueba_producto {
 
 
         System.out.println("- Crea Clientes");
-        c = new Cliente("71515029w", "Jimenez Rey", "Golfo Salonica", new Date(), "Igor", "razon");
+        c = new Cliente("71515029w", "Jimenez Rey", "Golfo Salonica", "Igor", "razon");
        // Thread.sleep(5000);
-        c2 = new Cliente("71515030w", "HSH1", "Golfo Salonica", new Date(), "Igor", "razon");
+        c2 = new Cliente("71515030w", "HSH1", "Golfo Salonica", "Igor", "razon");
        // Thread.sleep(5000);
-        c3 = new Cliente("71515031w", "HSH2", "Golfo Salonica", new Date(), "Igor", "razon");
+        c3 = new Cliente("71515031w", "HSH2", "Golfo Salonica", "Igor", "razon");
 /*
     } catch (InterruptedException e) {
             e.printStackTrace();
@@ -113,7 +120,7 @@ public class prueba_producto {
         //cliente c
         v.altaProductoVenta(1, gp.busqueda(p1.getCod()));
         v.altaProductoVenta(2, gp.busqueda(p2.getCod()));
-        //Cliente c2
+        //gestorClientes.Cliente c2
         v2.altaProductoVenta(1, gp.busqueda(p3.getCod()));
         v3.altaProductoVenta(1, gp.busqueda(p3.getCod()));
         v3.altaProductoVenta(1, gp.busqueda(p4.getCod()));
@@ -130,19 +137,19 @@ public class prueba_producto {
 
 
     /**
- * 1- Inicializa Gestor de Clientes
- * 2- Añade Cliente a la lista de clients
- * 3- Busca el Cliente creado en la lista
+ * 1- Inicializa gestor.Gestor de Clientes
+ * 2- Añade gestorClientes.Cliente a la lista de clients
+ * 3- Busca el gestorClientes.Cliente creado en la lista
  */
     public void gestorClientes() {
 
-        System.out.println(".....Creando Gestor de Clientes");
+        System.out.println(".....Creando gestor.Gestor de Clientes");
         gc = new GestionCliente();
         System.out.println("Añadiendo cliente al gestor de clientes");
         gc.alta(c);
-        System.out.println("Cod. Cliente: " + c.getCod());
+        System.out.println("Cod. gestorClientes.Cliente: " + c.getCod());
         if (gc.busqueda(123) != null) {
-            System.out.println("Cliente encontrado");
+            System.out.println("gestorClientes.Cliente encontrado");
             clienteBuscado = gc.busqueda(123);
             System.out.println(clienteBuscado);
         }
@@ -150,21 +157,21 @@ public class prueba_producto {
 
     /**
      * 1- Inicializa gestor de ventas
-     * 2- Añade el Cliente y su Venta al Gestor de ventas
+     * 2- Añade el gestorClientes.Cliente y su gestorVentas.Venta al gestor.Gestor de ventas
      */
     public void gestorVenta() {
-        System.out.println("---> Creando Gestor de Ventas");
+        System.out.println("---> Creando gestor.Gestor de Ventas");
         gv = new GestionVenta();
         System.out.println("Añadiend	o cliente y venta al gestor");
         gv.anadirVenta(c, v);
 
     }
  /**
- * 1-Busca Ventas del Cliente en el GestorVentas
- * 2-Crea factura con Cliente y sus Ventas
+ * 1-Busca Ventas del gestorClientes.Cliente en el GestorVentas
+ * 2-Crea factura con gestorClientes.Cliente y sus Ventas
  */
     public void gestorFacturas() {
-        System.out.println("---> Iniciando Gestor de Facturas");
+        System.out.println("---> Iniciando gestor.Gestor de Facturas");
         if (gv.buscarVentas(clienteBuscado))
             System.out.println("Obteniendo Ventas de cliente");
 

@@ -1,4 +1,4 @@
-//package tpv_ex_v05;
+package gestorProductos;
 
 
 public class ProductoStock extends Producto {

@@ -1,4 +1,6 @@
+import gestorProductos.ProductoStock;
 import org.junit.Test;
+import tpv.TPV;
 
 /**
  * Created by ras on 30/8/15.

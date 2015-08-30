@@ -1,4 +1,6 @@
+package gestorVentas;
 
+import gestorClientes.Cliente;
 
 import java.util.ArrayList;
 import java.util.HashMap;

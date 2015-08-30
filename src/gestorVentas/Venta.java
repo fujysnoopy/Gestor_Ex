@@ -1,4 +1,7 @@
-//package tpv_ex_v05;
+package gestorVentas;//package tpv_ex_v05;
+
+import gestorProductos.ProductoStock;
+import gestorClientes.Cliente;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -50,6 +53,6 @@ public class Venta {
     public float getImporteVenta(){ return importeVenta; }
 
     public String toString(){
-        return String.format("ID Venta: %12s Cod.Cliente: %d Tam.Lista: %d", this.id, cliente.getCod(), lp.size());
+        return String.format("ID gestorVentas.Venta: %12s Cod.gestorClientes.Cliente: %d Tam.Lista: %d", this.id, cliente.getCod(), lp.size());
     }
 }

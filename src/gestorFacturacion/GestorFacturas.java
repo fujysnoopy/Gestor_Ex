@@ -1,7 +1,10 @@
-//package tpv_ex_v05;
+package gestorFacturacion;//package tpv_ex_v05;
 
-import java.util.HashSet;
+import gestorClientes.Cliente;
+import gestorVentas.Venta;
+
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class GestorFacturas {
 	private HashSet<Factura> facturas;

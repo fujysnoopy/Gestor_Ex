@@ -1,27 +1,28 @@
-//package tpv_ex_v05;
+package gestorClientes;//package tpv_ex_v05;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
 public class Cliente implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
-
+    private static  SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyyMMdd");
     private String NIF;
     private String apellidos;
     private String domicilio;
-    private Date fechaAlta;
+    private int fechaAlta;
     private int id;
     private String nombre;
     private String razonSocial;
     private boolean baja;
 
 
-    public Cliente(String NIF, String apellidos, String domicilio, Date fechaAlta, String nombre,
+    public Cliente(String NIF, String apellidos, String domicilio, String nombre,
                    String razonSocial) {
         this.NIF = NIF;
         this.apellidos = apellidos;
         this.domicilio = domicilio;
-        this.fechaAlta = fechaAlta;
+        this.fechaAlta = Integer.parseInt(DATE_FORMAT.format(new Date()));
         this.id = getUID();
         this.nombre = nombre;
         this.razonSocial = razonSocial;

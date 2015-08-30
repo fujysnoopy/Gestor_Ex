@@ -1,4 +1,6 @@
-//package tpv_ex_v05;
+package gestorProductos;
+
+import gestor.Gestor;
 
 public class GestionProductos extends Gestor<ProductoStock> {
 	

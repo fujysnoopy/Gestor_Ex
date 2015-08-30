@@ -1,4 +1,6 @@
-//package tpv_ex_v05;
+package gestorClientes;//package tpv_ex_v05;
+
+import gestor.Gestor;
 
 public class GestionCliente extends Gestor<Cliente> {
 	

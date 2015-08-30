@@ -1,3 +1,11 @@
+package tpv;
+
+import gestorProductos.ProductoStock;
+import gestorClientes.GestionCliente;
+import gestorFacturacion.GestorFacturas;
+import gestorProductos.GestionProductos;
+import gestorVentas.GestionVenta;
+
 /**
  * Created by ras on 30/8/15.
  */
