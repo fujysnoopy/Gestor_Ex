@@ -93,7 +93,11 @@ public class prueba_producto {
     } catch (InterruptedException e) {
             e.printStackTrace();
     }
+
 */
+
+
+
         System.out.println("- Alta Clientes en GC");
         gc.alta(c);
         gc.alta(c2);
