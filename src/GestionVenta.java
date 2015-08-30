@@ -3,10 +3,10 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class GestionVenta {
+public class GestionVenta implements java.io.Serializable {
 
     private HashMap<Cliente, ArrayList<Venta>> gv;
-
+    private static final long serialVersionUID = 1L;
 
     public GestionVenta() {
         gv = new HashMap<>();
@@ -95,24 +95,7 @@ public class GestionVenta {
         }
         return null;
     }
-/*
 
-
-    private ArrayList<Venta> buscarVentasTiempo(ArrayList<Venta> listaVentas, int desde, int hasta){
-
-            for (ArrayList<Venta> listaVentas : get(cliente)){
-                for(Venta ventas:listaVentas){
-                    int fechVenta;
-                    fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
-                    if (fechVenta >= desde && fechVenta <= hasta) {
-
-
-                    }
-                }
-            }
-    }
-
-*/
     public void importar(String fichero) {
 
     }

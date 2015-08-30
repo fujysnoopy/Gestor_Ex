@@ -3,7 +3,9 @@
 import java.util.Date;
 
 
-public class Cliente {
+public class Cliente implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String NIF;
     private String apellidos;
     private String domicilio;

@@ -5,7 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Factura {
+public class Factura implements java.io.Serializable {
+    private static final long serialVersionUID=1L;
     private Cliente cliente;
     private String fechaEmision;
     private float importeTotal;
