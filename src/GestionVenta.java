@@ -24,7 +24,7 @@ public class GestionVenta {
 
 
         } else {
-            cVentas = new ArrayList<Venta>();
+            cVentas = new ArrayList<>();
             cVentas.add(v);
             gv.put(c, cVentas);
             //System.out.println(gv.size());
@@ -58,7 +58,7 @@ public class GestionVenta {
                     int fechVenta;
                     fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
                     if (fechVenta >= desde && fechVenta <= hasta) {
-                        if (sw==false){
+                        if (!sw){
                             informeVentas = new ArrayList<>();
                             sw = true;
                         }
@@ -68,7 +68,7 @@ public class GestionVenta {
                     }
                 }
             }
-            if (sw == true) return informeVentas;
+            if (sw) return informeVentas;
 
         }
         return null;
@@ -83,14 +83,14 @@ public class GestionVenta {
                         int fechVenta;
                         fechVenta = Integer.parseInt(venta.getId().substring(0, 8));
                         if (fechVenta >= desde && fechVenta <= hasta) {
-                            if(sw==false){
+                            if(!sw){
                                 informeVentas = new ArrayList<Venta>();
                                 sw=true;
                             }
                             informeVentas.add(venta);
                         }
                     }
-                if (sw == true) return informeVentas;
+                if (sw) return informeVentas;
             }
         }
         return null;

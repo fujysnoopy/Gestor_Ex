@@ -10,13 +10,6 @@ public class GestorFacturas {
 		facturas = new HashSet<>();
 	}
 
-    /*********************************************************************************************
-     * 
-     * @param c
-     * @param ventas
-     * @param fecha
-     * @return
-     */
     public Factura generarFactura(Cliente c, ArrayList<Venta> ventas, String anoFiscal){
         ArrayList<Venta> ventasFact = null;
         boolean sw = false;
@@ -27,15 +20,15 @@ public class GestorFacturas {
             
             //String subcadena = v.getId().substring(0, 4);
               if (v.getId().substring(0, 4).equals(anoFiscal)) {
-                if (sw == false) {
-                    ventasFact = new ArrayList<Venta>();
+                if (!sw) {
+                    ventasFact = new ArrayList<>();
                     sw = true;
                 }
                 ventasFact.add(v);
             }
         }
         
-        if (sw == true) {
+        if (sw) {
             Factura fact=new Factura(c, ventasFact);
             facturas.add(fact);
             return fact;
