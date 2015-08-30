@@ -47,14 +47,7 @@ public class GestionVenta {
     }
 
 
-    /**
-     * Devuelve un listado con las ventas de cualquier cliente comprendidas
-     * entre dos fechas (yyyyMMdd)
-     *
-     * @param desde
-     * @param hh
-     * @return
-     */
+
     public ArrayList<Venta> listadoVentasTiempo(int desde, int hasta) {
         if (gv.size() != 0) {
             boolean sw = false;

@@ -21,12 +21,12 @@ public class Gestor<E> implements java.io.Serializable{
 		if(gest.size()!=0) {
             for (E element : gest) {
                 if (element instanceof ProductoStock) {
-                    if (cod == ((ProductoStock) element).getCod()) {
+                    if (cod == ((ProductoStock) element).getCod() && !((ProductoStock) element).esBaja()) {
                         //if(cod==(new ProductoStock()).getCod()){
                         //System.out.println("cod producto encontrado");
                         return element;
                     }
-                } else if (cod == ((Cliente) element).getCod()) {
+                } else if (cod == ((Cliente) element).getCod() && !((Cliente) element).esBaja()) {
                     //System.out.println("cod cliente encontrado");
                     return element;
                 }

@@ -84,11 +84,11 @@ public class prueba_producto {
 
 
         System.out.println("- Crea Clientes");
-        c = new Cliente("71515029w", "Jimenez Rey", "Golfo Salonica", new Date(), 1, "Igor", "razon");
+        c = new Cliente("71515029w", "Jimenez Rey", "Golfo Salonica", new Date(), "Igor", "razon");
        // Thread.sleep(5000);
-        c2 = new Cliente("71515030w", "HSH1", "Golfo Salonica", new Date(), 2, "Igor", "razon");
+        c2 = new Cliente("71515030w", "HSH1", "Golfo Salonica", new Date(), "Igor", "razon");
        // Thread.sleep(5000);
-        c3 = new Cliente("71515031w", "HSH2", "Golfo Salonica", new Date(), 3, "Igor", "razon");
+        c3 = new Cliente("71515031w", "HSH2", "Golfo Salonica", new Date(), "Igor", "razon");
 /*
     } catch (InterruptedException e) {
             e.printStackTrace();

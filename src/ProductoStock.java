@@ -24,7 +24,7 @@ public class ProductoStock extends Producto {
         return stock;
     }
 
-    public boolean getBaja(){
+    public boolean esBaja(){
         return baja;
     }
 

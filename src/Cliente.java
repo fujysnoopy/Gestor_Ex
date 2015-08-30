@@ -14,7 +14,7 @@ public class Cliente {
     private boolean baja;
 
 
-    public Cliente(String NIF, String apellidos, String domicilio, Date fechaAlta, int id, String nombre,
+    public Cliente(String NIF, String apellidos, String domicilio, Date fechaAlta, String nombre,
                    String razonSocial) {
         this.NIF = NIF;
         this.apellidos = apellidos;
@@ -39,8 +39,9 @@ public class Cliente {
         return baja=true;
 
     }
-
-
+    public boolean esBaja(){
+        return baja;
+    }
 
     @Override
     public boolean equals(Object obj){
